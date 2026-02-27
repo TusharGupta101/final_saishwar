@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="About Saishwar Automotive Industries - experienced automotive industry workshop with certified mechanics. Our mission, vision, and team in the manufacturing industry.">
+  <meta name="keywords" content="about us, automotive industry, automotive industry workshop, certified mechanics, car repair garage, manufacturing industry, precision machining industry">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://yoursite.com/about.html">
+  <meta property="og:title" content="About Us | Saishwar Automotive Industries">
+  <meta property="og:description"
+    content="Experienced automotive industry workshop with certified mechanics. Mission and vision in the manufacturing industry.">
+  <meta property="og:url" content="https://yoursite.com/about.html">
+  <title>About Us | Saishwar Automotive Industries - Automotive Industry Workshop</title>
+  <link rel="icon" href="./Accet/logo/sai.logo.png" type="image/jpeg">
+  <!-- Google Analytics placeholder: add your GA script here -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* About Page Custom Styles */
+    .about-hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      padding: 7rem 0 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1.5" fill="rgba(255,255,255,0.05)"/><circle cx="80" cy="50" r="2" fill="rgba(255,255,255,0.03)"/><circle cx="40" cy="80" r="1.5" fill="rgba(255,255,255,0.05)"/></svg>') repeat;
+      background-size: 100px 100px;
+    }
+    .about-hero h1 {
+      color: #fff;
+      font-weight: 800;
+      font-size: 3rem;
+      position: relative;
+      z-index: 1;
+    }
+    .about-hero p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.2rem;
+      position: relative;
+      z-index: 1;
+    }
+    .about-stats-bar {
+      background: linear-gradient(135deg, #c41e3a 0%, #e63950 100%);
+      padding: 2.5rem 0;
+      margin-top: -2.5rem;
+      position: relative;
+      z-index: 10;
+      border-radius: 1rem;
+      box-shadow: 0 15px 50px rgba(196,30,58,0.35);
+    }
+    .about-stat {
+      text-align: center;
+      color: #fff;
+    }
+    .about-stat-number {
+      font-size: 2.75rem;
+      font-weight: 800;
+      display: block;
+      line-height: 1;
+    }
+    .about-stat-label {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 0.5rem;
+    }
+    .about-section {
+      padding: 4rem 0;
+    }
+    .section-label {
+      color: #c41e3a;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+    .section-heading {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: #1a202c;
+      margin-bottom: 1.5rem;
+    }
+    .about-text {
+      color: #4a5568;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+    .about-image-wrap {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    }
+    .about-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .about-image-wrap:hover img {
+      transform: scale(1.05);
+    }
+    .about-image-badge {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      background: rgba(255,255,255,0.95);
+      padding: 1rem 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .about-image-badge span {
+      font-weight: 700;
+      color: #1a202c;
+      font-size: 1.1rem;
+    }
+    .mv-card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      height: 100%;
+      border: 1px solid #f1f3f5;
+      text-decoration: none;
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+    .mv-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #c41e3a, #e63950);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+    .mv-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+    }
+    .mv-card:hover::before {
+      transform: scaleX(1);
+    }
+    .mv-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #c41e3a;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    .mv-card:hover .mv-icon {
+      background: linear-gradient(135deg, #c41e3a 0%, #e63950 100%);
+      color: #fff;
+      transform: scale(1.1) rotate(-5deg);
+    }
+    .mv-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #1a202c;
+      margin-bottom: 1rem;
+    }
+    .mv-text {
+      color: #4a5568;
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    .mv-link {
+      color: #c41e3a;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: gap 0.3s ease;
+    }
+    .mv-card:hover .mv-link {
+      gap: 0.75rem;
+    }
+    .value-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+      transition: all 0.4s ease;
+      border: 1px solid #f1f3f5;
+    }
+    .value-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    }
+    .value-icon {
+      width: 65px;
+      height: 65px;
+      background: linear-gradient(135deg, #c41e3a 0%, #e63950 100%);
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      color: #fff;
+      margin: 0 auto 1.25rem;
+      transition: transform 0.3s ease;
+    }
+    .value-card:hover .value-icon {
+      transform: scale(1.1);
+    }
+    .value-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1a202c;
+    }
+    @media (max-width: 768px) {
+      .about-hero h1 {
+        font-size: 2rem;
+      }
+      .about-stat-number {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="page-loader" class="page-loader" aria-hidden="true">
+    <i class="bi bi-gear-fill page-loader__gear"></i>
+  </div>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top py-3">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="saishwar-logo.png" alt="Saishwar Automotive"
+          class="logo-img me-2"><span class="brand-text">Saishwar Automotive</span></a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav.home">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html" data-i18n="nav.about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html" data-i18n="nav.services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html" data-i18n="nav.products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="machinery.html" data-i18n="nav.machinery">Machinery</a></li>
+          <li class="nav-item"><a class="nav-link" href="team.html" data-i18n="nav.team">Team</a></li>
+
+          <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav.contact">Contact</a></li>
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="about-hero">
+      <div class="container text-center">
+        <h1>About Our Company</h1>
+        <p class="mb-0">Excellence in automotive manufacturing since 2009</p>
+      </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="container">
+      <div class="about-stats-bar">
+        <div class="row g-4">
+          <div class="col-6 col-md-4">
+            <div class="about-stat">
+              <span class="about-stat-number">15+</span>
+              <div class="about-stat-label">Years Experience</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="about-stat">
+              <span class="about-stat-number">20+</span>
+              <div class="about-stat-label">Advanced Machines</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="about-stat">
+              <span class="about-stat-number">100%</span>
+              <div class="about-stat-label">Quality Focus</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="mt-4">
+      <div class="container">
+        <ol class="breadcrumb breadcrumb-custom">
+          <li class="breadcrumb-item"><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">About</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- About Content Section -->
+    <section class="about-section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <p class="section-label">Who We Are</p>
+            <h2 class="section-heading">Leading Automotive Component Manufacturer</h2>
+            <p class="about-text">Saishwar Automotive Industries is a premier manufacturer of precision machined components and sub-assemblies for the automotive industry. Located in Chakan MIDC, Pune, we have been serving the automotive sector with excellence for over 15 years.</p>
+            <p class="about-text">Our state-of-the-art facility is equipped with advanced CNC machines, VMC, lathes, and specialized equipment to deliver high-quality components that meet international standards. We specialize in manufacturing brass bushes, guide bushes, pistons, pipes, quarter pins, and custom precision parts.</p>
+            <p class="about-text mb-0">Our commitment to quality, timely delivery, and customer satisfaction has made us a trusted partner for leading automotive manufacturers across India.</p>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-image-wrap">
+              <img src="./Accet/profile/IMG_20260207_142035341.jpg.jpeg" alt="Saishwar Automotive Industries Facility">
+              <div class="about-image-badge">
+                <span><i class="bi bi-award-fill me-2" style="color: #c41e3a;"></i>ISO Certified</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="about-section" style="background: #f8f9fa;">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="section-label">What We Stand For</p>
+          <h2 class="section-heading">Our Mission & Vision</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <a href="mission.html" class="mv-card">
+              <div class="mv-icon"><i class="bi bi-bullseye"></i></div>
+              <h3 class="mv-title">Our Mission</h3>
+              <p class="mv-text">To deliver precision-engineered automotive components that exceed customer expectations through continuous innovation, strict quality control, and sustainable manufacturing practices.</p>
+              <span class="mv-link">Read more <i class="bi bi-arrow-right"></i></span>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a href="vision.html" class="mv-card">
+              <div class="mv-icon"><i class="bi bi-eye"></i></div>
+              <h3 class="mv-title">Our Vision</h3>
+              <p class="mv-text">To become India's most trusted precision component manufacturer, recognized globally for quality, innovation, and reliability in the automotive industry.</p>
+              <span class="mv-link">Read more <i class="bi bi-arrow-right"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="about-section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="section-label">Our Principles</p>
+          <h2 class="section-heading">Core Values</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-6 col-md-3">
+            <div class="value-card">
+              <div class="value-icon"><i class="bi bi-award"></i></div>
+              <h4 class="value-title">Quality First</h4>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="value-card">
+              <div class="value-icon"><i class="bi bi-tools"></i></div>
+              <h4 class="value-title">Expert Craftsmanship</h4>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="value-card">
+              <div class="value-icon"><i class="bi bi-heart"></i></div>
+              <h4 class="value-title">Customer Focus</h4>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="value-card">
+              <div class="value-icon"><i class="bi bi-lightning-charge"></i></div>
+              <h4 class="value-title">Innovation</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-4 py-4">
+        <div class="col-md-4">
+          <div class="footer-brand">
+            <img src="./Accet/logo/sai.logo.png" alt="Saishwar Automotive" class="footer-logo mb-3">
+            <h5 class="mb-3 text-white">Saishwar Automotive</h5>
+            <p class="text-white">Manufacturing precision machined components and sub-assemblies with 15+ years of
+              expertise.</p>
+            <div class="social-links">
+              <a href="#" class="social-link me-2" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="social-link me-2" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="social-link me-2" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <h6 class="mb-3 text-white">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="./index.html" class="text-decoration-none text-white">Home</a></li>
+            <li class="mb-2"><a href="./about.html" class="text-decoration-none text-white">About Us</a></li>
+            <li class="mb-2"><a href="./services.html" class="text-decoration-none text-white">Services</a></li>
+            <li class="mb-2"><a href="./products.html" class="text-decoration-none text-white">Products</a></li>
+            <li class="mb-2"><a href="./contact.html" class="text-decoration-none text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="mb-3">Contact Info</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2 text-white"><i class="bi bi-geo-alt me-2"></i>Chakan MIDC, Pune</li>
+            <li class="mb-2 text-white"><i class="bi bi-telephone me-2"></i>+91 9860084990</li>
+            <li class="mb-2 text-white"><i class="bi bi-envelope me-2"></i>saishwarengg@yahoo.com</li>
+            <li class="mb-2 text-white"><i class="bi bi-clock me-2"></i>Mon-Sat: 8AM-6PM</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="mb-3 text-white">Services</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2 text-white">Precision Machining</li>
+            <li class="mb-2 text-white">Engineering Job Work</li>
+            <li class="mb-2 text-white">Component Manufacturing</li>
+            <li class="mb-2 text-white">Sub-Assembly Works</li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class="text-center py-3">
+        <p class="mb-0 text-white">&copy; 2025 Saishwar Automotive Industries. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/+919860084990" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script src="js/i18n.js"></script>
+</body>
+
+</html>

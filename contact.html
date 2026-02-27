@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Contact Saishwar Automotive Industries - book an appointment, get a quote for automotive industry services. Pune address, phone, email. Professional automotive industry workshop.">
+  <meta name="keywords" content="contact automotive industry, book appointment industry, automotive industry workshop, car repair quote industry, Pune industry, manufacturing industry contact, precision machining industry">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://yoursite.com/contact.html">
+  <meta property="og:title" content="Contact & Appointment | Saishwar Automotive Industries - Industry Services">
+  <meta property="og:description" content="Book an appointment or get in touch with our automotive industry team. We're here to help with your manufacturing needs.">
+  <meta property="og:url" content="https://yoursite.com/contact.html">
+  <title>Contact & Appointment | Saishwar Automotive Industries - Automotive Industry Services</title>
+  <link rel="icon" href="./Accet/logo/sai.logo.png" type="image/jpeg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Contact Page Custom Styles */
+    .contact-hero-new {
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
+      padding: 7rem 0 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-hero-new::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="3" fill="rgba(255,255,255,0.08)"/><circle cx="40" cy="80" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+      background-size: 100px 100px;
+    }
+    .contact-hero-new h1 {
+      color: #fff;
+      font-weight: 800;
+      font-size: 2.75rem;
+      position: relative;
+      z-index: 1;
+    }
+    .contact-hero-new p {
+      color: rgba(255,255,255,0.9);
+      font-size: 1.15rem;
+      position: relative;
+      z-index: 1;
+    }
+    .contact-hero-new .btn-light {
+      background: #fff;
+      color: #1e3c72;
+      border: none;
+      font-weight: 600;
+      padding: 0.875rem 2rem;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+    .contact-hero-new .btn-light:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    .contact-hero-new .btn-success {
+      background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+      border: none;
+      font-weight: 600;
+      padding: 0.875rem 2rem;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+    .contact-hero-new .btn-success:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(37,211,102,0.3);
+    }
+    .info-cards-wrapper {
+      margin-top: -3rem;
+      position: relative;
+      z-index: 10;
+    }
+    .info-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      height: 100%;
+      border: 1px solid #f1f3f5;
+    }
+    .info-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    }
+    .info-card-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, #1e3c72 0%, #7e22ce 100%);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+      font-size: 1.75rem;
+      color: #fff;
+      transition: transform 0.3s ease;
+    }
+    .info-card:hover .info-card-icon {
+      transform: scale(1.1) rotate(5deg);
+    }
+    .info-card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #212529;
+      margin-bottom: 0.5rem;
+    }
+    .info-card-text {
+      color: #6c757d;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .info-card-link {
+      color: #7e22ce;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: gap 0.3s ease;
+    }
+    .info-card-link:hover {
+      gap: 0.75rem;
+      color: #1e3c72;
+    }
+    .contact-section {
+      padding: 4rem 0;
+    }
+    .form-card {
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      overflow: hidden;
+      border: 1px solid #f1f3f5;
+    }
+    .form-header {
+      background: linear-gradient(135deg, #1e3c72 0%, #7e22ce 100%);
+      padding: 2rem;
+      color: #fff;
+    }
+    .form-header h2 {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .form-body {
+      padding: 2rem;
+    }
+    .form-floating-custom {
+      position: relative;
+      margin-bottom: 1.25rem;
+    }
+    .form-floating-custom input,
+    .form-floating-custom select,
+    .form-floating-custom textarea {
+      width: 100%;
+      padding: 1rem 1rem 1rem 3rem;
+      border: 2px solid #e9ecef;
+      border-radius: 12px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background: #f8f9fa;
+    }
+    .form-floating-custom input:focus,
+    .form-floating-custom select:focus,
+    .form-floating-custom textarea:focus {
+      border-color: #7e22ce;
+      background: #fff;
+      box-shadow: 0 0 0 4px rgba(126,34,206,0.1);
+      outline: none;
+    }
+    .form-floating-custom label {
+      position: absolute;
+      left: 3rem;
+      top: 1rem;
+      color: #6c757d;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      pointer-events: none;
+    }
+    .form-floating-custom input:focus + label,
+    .form-floating-custom input:not(:placeholder-shown) + label,
+    .form-floating-custom select:focus + label,
+    .form-floating-custom select:not([value=""]) + label,
+    .form-floating-custom textarea:focus + label,
+    .form-floating-custom textarea:not(:placeholder-shown) + label {
+      top: -0.6rem;
+      left: 1rem;
+      font-size: 0.8rem;
+      background: #fff;
+      padding: 0 0.5rem;
+      color: #7e22ce;
+      font-weight: 600;
+    }
+    .form-floating-custom i {
+      position: absolute;
+      left: 1rem;
+      top: 1.1rem;
+      color: #6c757d;
+      font-size: 1.1rem;
+    }
+    .form-floating-custom input:focus ~ i,
+    .form-floating-custom select:focus ~ i,
+    .form-floating-custom textarea:focus ~ i {
+      color: #7e22ce;
+    }
+    .btn-submit {
+      background: linear-gradient(135deg, #1e3c72 0%, #7e22ce 100%);
+      color: #fff;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1rem;
+      width: 100%;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(126,34,206,0.3);
+    }
+    .map-card {
+      background: #fff;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      border: 1px solid #f1f3f5;
+      height: 100%;
+    }
+    .map-container {
+      height: 400px;
+      position: relative;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .map-info {
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .map-info-title {
+      font-weight: 700;
+      color: #212529;
+      margin-bottom: 0.25rem;
+    }
+    .map-info-address {
+      color: #6c757d;
+      font-size: 0.9rem;
+    }
+    .btn-directions {
+      background: linear-gradient(135deg, #1e3c72 0%, #7e22ce 100%);
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    .btn-directions:hover {
+      transform: translateX(5px);
+      color: #fff;
+    }
+    @media (max-width: 768px) {
+      .contact-hero-new h1 {
+        font-size: 2rem;
+      }
+      .map-container {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="page-loader" class="page-loader" aria-hidden="true">
+    <i class="bi bi-gear-fill page-loader__gear"></i>
+  </div>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top py-3">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="saishwar-logo.png" alt="Saishwar Automotive"
+          class="logo-img me-2"><span class="brand-text">Saishwar Automotive</span></a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav.home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav.about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html" data-i18n="nav.services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html" data-i18n="nav.products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="machinery.html" data-i18n="nav.machinery">Machinery</a></li>
+          <li class="nav-item"><a class="nav-link" href="team.html" data-i18n="nav.team">Team</a></li>
+
+          <li class="nav-item"><a class="nav-link active" href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="contact-hero-new">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb breadcrumb-custom mb-3">
+                <li class="breadcrumb-item"><a href="index.html" data-i18n="nav.home" style="color: rgba(255,255,255,0.8);">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page" style="color: #fff;">Contact</li>
+              </ol>
+            </nav>
+            <h1 class="mb-3">Let's Start a Conversation</h1>
+            <p class="lead mb-0">Book an appointment, request a quote, or visit us. We're here to help with all your automotive manufacturing needs.</p>
+          </div>
+          <div class="col-lg-5 text-lg-end mt-4 mt-lg-0">
+            <a href="tel:+919860084990" class="btn btn-light btn-lg">
+              <i class="bi bi-telephone-fill me-2"></i>Call Now
+            </a>
+            <a href="https://wa.me/919860084990" target="_blank" rel="noopener noreferrer"
+              class="btn btn-success btn-lg ms-2">
+              <i class="bi bi-whatsapp me-2"></i>WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info Cards -->
+    <section class="info-cards-wrapper">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-3">
+            <div class="info-card">
+              <div class="info-card-icon">
+                <i class="bi bi-geo-alt-fill"></i>
+              </div>
+              <h5 class="info-card-title">Visit Us</h5>
+              <p class="info-card-text">Saishwar Automotive Industries<br>Chakan MIDC, Pune, Maharashtra</p>
+              <a href="https://www.google.com/maps/place/Saishwar+Automotive+Industries/@18.6856957,73.7975328,17z"
+                target="_blank" rel="noopener noreferrer" class="info-card-link">Get Directions <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="info-card">
+              <div class="info-card-icon">
+                <i class="bi bi-telephone-fill"></i>
+              </div>
+              <h5 class="info-card-title">Call Us</h5>
+              <p class="info-card-text">+91 9860084990<br>Mon-Sat: 8AM-6PM</p>
+              <a href="tel:+919860084990" class="info-card-link">Call Now <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="info-card">
+              <div class="info-card-icon">
+                <i class="bi bi-envelope-fill"></i>
+              </div>
+              <h5 class="info-card-title">Email Us</h5>
+              <p class="info-card-text">saishwarengg@yahoo.com<br>We reply within 24 hours</p>
+              <a href="mailto:saishwarengg@yahoo.com" class="info-card-link">Send Email <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="info-card">
+              <div class="info-card-icon">
+                <i class="bi bi-clock-fill"></i>
+              </div>
+              <h5 class="info-card-title">Working Hours</h5>
+              <p class="info-card-text">Monday – Saturday<br>8:00 AM – 6:00 PM</p>
+              <span style="color: #dc3545; font-weight: 600; font-size: 0.9rem;">Sunday: Closed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form & Map Section -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Form -->
+          <div class="col-lg-5">
+            <div class="form-card">
+              <div class="form-header">
+                <h2><i class="bi bi-chat-dots me-2"></i>Send a Message</h2>
+                <p class="mb-0 opacity-90">Fill out the form below and we'll get back to you shortly.</p>
+              </div>
+              <div class="form-body">
+                <div id="formSuccess" class="alert alert-success d-none" role="alert">
+                  <i class="bi bi-check-circle-fill me-2"></i>Thank you! Your message has been sent successfully.
+                </div>
+                <div id="formError" class="alert alert-danger d-none" role="alert">
+                  <i class="bi bi-exclamation-circle-fill me-2"></i>Something went wrong. Please try again.
+                </div>
+                <form id="contactForm" novalidate>
+                  <div class="form-floating-custom">
+                    <i class="bi bi-person"></i>
+                    <input type="text" id="name" name="name" placeholder=" " required minlength="2" maxlength="100">
+                    <label for="name">Your Name *</label>
+                  </div>
+                  <div class="form-floating-custom">
+                    <i class="bi bi-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder=" " required>
+                    <label for="email">Email Address *</label>
+                  </div>
+                  <div class="form-floating-custom">
+                    <i class="bi bi-telephone"></i>
+                    <input type="tel" id="phone" name="phone" placeholder=" " required minlength="10" maxlength="15">
+                    <label for="phone">Phone Number *</label>
+                  </div>
+                  <div class="form-floating-custom">
+                    <i class="bi bi-tools"></i>
+                    <select id="serviceType" name="serviceType" required>
+                      <option value="" disabled selected>Select a service</option>
+                      <option value="spare">Spare Parts</option>
+                      <option value="milling">Milling</option>
+                      <option value="drilling">Drilling</option>
+                      <option value="tapping">Tapping</option>
+                      <option value="embossing">Embossing</option>
+                      <option value="threading">Threading</option>
+                      <option value="other">Other Services</option>
+                    </select>
+                    <label for="serviceType" style="top: -0.6rem; left: 1rem; font-size: 0.8rem; background: #fff; padding: 0 0.5rem; color: #7e22ce; font-weight: 600;">Service Required *</label>
+                  </div>
+                  <div class="form-floating-custom">
+                    <i class="bi bi-chat-text" style="top: 1.3rem;"></i>
+                    <textarea id="message" name="message" rows="3" placeholder=" " required minlength="10" maxlength="1000"></textarea>
+                    <label for="message">Your Message *</label>
+                  </div>
+                  <button type="submit" class="btn-submit">
+                    <i class="bi bi-send-fill"></i>Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Map -->
+          <div class="col-lg-7">
+            <div class="map-card">
+              <div class="map-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241.05!2d73.7975328!3d18.6856957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b7a02cbddc99%3A0x7c4ead152f12624!2sSaishwar%20Automotive%20Industries!5e0!3m2!1sen!2sin!4v1738329600000"
+                  title="Saishwar Automotive Industries - Location" allowfullscreen loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <div class="map-info">
+                <div>
+                  <div class="map-info-title"><i class="bi bi-geo-alt-fill me-2" style="color: #7e22ce;"></i>Saishwar Automotive Industries</div>
+                  <div class="map-info-address">Chakan MIDC, Pune, Maharashtra, India</div>
+                </div>
+                <a href="https://www.google.com/maps/place/Saishwar+Automotive+Industries/@18.6856957,73.7975328,17z"
+                  target="_blank" rel="noopener noreferrer" class="btn-directions">
+                  <i class="bi bi-sign-turn-right-fill"></i>Get Directions
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-4 py-4">
+        <div class="col-md-4">
+          <div class="footer-brand">
+            <h5 class="mb-3 text-white"><i class="bi bi-gear-fill me-2"></i> Saishwar Automotive</h5>
+            <p class="text-white">Manufacturing precision machined components and sub-assemblies with 15+ years of
+              expertise.</p>
+            <div class="social-links">
+              <a href="#" class="social-link me-2" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="social-link me-2" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="social-link me-2" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <h6 class="mb-3 text-white">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="./index.html" class="text-decoration-none text-white">Home</a></li>
+            <li class="mb-2"><a href="./about.html" class="text-decoration-none text-white">About Us</a></li>
+            <li class="mb-2"><a href="./services.html" class="text-decoration-none text-white">Services</a></li>
+            <li class="mb-2"><a href="./products.html" class="text-decoration-none text-white">Products</a></li>
+            <li class="mb-2"><a href="./contact.html" class="text-decoration-none text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="mb-3 text-white">Contact Info</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2 text-white"><i class="bi bi-geo-alt me-2"></i>Chakan MIDC, Pune</li>
+            <li class="mb-2 text-white"><i class="bi bi-telephone me-2"></i>+91 9860084990</li>
+            <li class="mb-2 text-white"><i class="bi bi-envelope me-2"></i>saishwarengg@yahoo.com</li>
+            <li class="mb-2 text-white"><i class="bi bi-clock me-2"></i>Mon-Sat: 8AM-6PM</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="mb-3 text-white">Services</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2 text-white">Precision Machining</li>
+            <li class="mb-2 text-white">Engineering Job Work</li>
+            <li class="mb-2 text-white">Component Manufacturing</li>
+            <li class="mb-2 text-white">Sub-Assembly Works</li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class="text-center py-3">
+        <p class="mb-0 text-white">&copy; 2025 Saishwar Automotive Industries. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/+919860084990" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script src="js/i18n.js"></script>
+</body>
+
+</html>

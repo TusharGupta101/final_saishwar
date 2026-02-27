@@ -1,0 +1,28 @@
+# Saishwar Automotive Industries - robots.txt for SEO
+User-agent: *
+Allow: /
+
+# Crawl-delay for better server performance
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://yoursite.com/sitemap.xml
+
+# Allow all important pages
+Allow: /index.html
+Allow: /about.html
+Allow: /services.html
+Allow: /products.html
+Allow: /machinery.html
+Allow: /contact.html
+Allow: /team.html
+Allow: /mission.html
+Allow: /vision.html
+Allow: /checklist.html
+
+# Disallow non-essential pages
+Disallow: /404.html
+
+# Optional: disallow admin or private paths if you add them later
+# Disallow: /admin/
+# Disallow: /private/
